@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  background: #808080;
 }
 
 *,
@@ -139,6 +140,13 @@ a {
 
 .slide__text {
   width: 100%;
+  padding-left: 1em;
+}
+
+.slide__text p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 1em;
 }
 
 #controls {
@@ -153,18 +161,18 @@ a {
   height: 2em;
   background-color: #ccc;
   border-radius: 50%;
-  border: 0.6em solid #fff;
+  border: 0.6em solid #808080;
   cursor: pointer;
-  transition: background-color .5s;
+  transition: background-color 0.5s;
 }
 
 #controls label:hover {
-  background-color: lightskyblue;
-} 
+  background-color: darkcyan;
+}
 
 #controls label:active {
   background-color: brown;
-} 
+}
 
 #slide1:checked ~ #bottom #controls label:nth-child(1),
 #slide2:checked ~ #bottom #controls label:nth-child(2),
