@@ -127,29 +127,49 @@ a {
 }
 
 #slides__text {
-  width: 80%;
+  width: 75%;
   overflow: hidden;
 }
 
 .text__inner {
   display: flex;
   width: 500%;
-  transition: all .5s;
+  transition: all 0.5s;
 }
 
-.slideT {
+.slide__text {
   width: 100%;
 }
 
 #controls {
-  background-color: black;
-  width: 20%;
+  display: flex;
+  justify-content: space-around;
+  width: 25%;
 }
 
 #controls label {
   display: inline-block;
-  width: 10px;
-  height: 10px;
+  width: 2em;
+  height: 2em;
   background-color: #ccc;
+  border-radius: 50%;
+  border: 0.6em solid #fff;
+  cursor: pointer;
+  transition: background-color .5s;
 }
 
+#controls label:hover {
+  background-color: lightskyblue;
+} 
+
+#controls label:active {
+  background-color: brown;
+} 
+
+#slide1:checked ~ #bottom #controls label:nth-child(1),
+#slide2:checked ~ #bottom #controls label:nth-child(2),
+#slide3:checked ~ #bottom #controls label:nth-child(3),
+#slide4:checked ~ #bottom #controls label:nth-child(4),
+#slide5:checked ~ #bottom #controls label:nth-child(5) {
+  background: #444;
+}
